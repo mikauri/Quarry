@@ -5,7 +5,7 @@ Two dragon-racing game modes for Paper/Spigot servers, set up from an in-game me
 - **Manhunt**: runners try to kill the Ender Dragon while hunters track them down with compasses.
 - **Dragon Rush**: everyone races to the End, and whoever lands the final blow on the dragon wins.
 
-[Download on Modrinth](https://modrinth.com/plugin/quarry)
+[Download on Modrinth](https://modrinth.com/plugin/quarry-manhunt)
 
 ## Manhunt
 
