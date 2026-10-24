@@ -1,0 +1,82 @@
+name: Bug report
+description: Something in Quarry isn't working right.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! The details below make it much faster to track down.
+        Tip: `/quarry status` shows the current roles, timer and settings.
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Game mode
+      options:
+        - Manhunt
+        - Dragon Rush
+        - Both / not mode-specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect to happen instead?
+      placeholder: "A hunter's compass kept pointing at spawn after the runner went to the Nether."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. /quarry manhunt random 1
+        2. /quarry manhunt headstart 30
+        3. Runner enters the Nether, hunter right-clicks the compass
+    validations:
+      required: false
+
+  - type: input
+    id: players
+    attributes:
+      label: Number of players
+      placeholder: "1 runner, 3 hunters"
+    validations:
+      required: false
+
+  - type: textarea
+    id: status-output
+    attributes:
+      label: Output of /quarry status
+      render: text
+    validations:
+      required: false
+
+  - type: input
+    id: server
+    attributes:
+      label: Server software and version
+      description: Run `/version` in game or in the console.
+      placeholder: "Paper 26.3 build 12"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Quarry version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console errors
+      description: Paste any errors from the server console that mention Quarry.
+      render: text
+    validations:
+      required: false

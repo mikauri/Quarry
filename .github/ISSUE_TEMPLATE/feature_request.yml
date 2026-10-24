@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest an idea for Quarry.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Quarry to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help you or your server?
+    validations:
+      required: false

@@ -1,0 +1,50 @@
+# ──────────────────────────────────────────────────────────────────
+#  Quarry config.yml
+# ──────────────────────────────────────────────────────────────────
+
+# Seconds the runners get to flee before hunters are released.
+# Set in-game with /quarry headstart <seconds> (op only).
+head-start-seconds: 0
+
+# Whether an op has set the head start yet. A game CANNOT start until this is
+# true. It flips to true automatically the first time /quarry headstart is used.
+head-start-set: false
+
+# Lives each runner has. 1 = eliminated (spectator) on first death.
+runner-lives: 1
+
+# Cooldown between compass re-locks, in seconds. 0 = no cooldown.
+compass-cooldown-seconds: 0
+
+# NOTE: During a head start, hunters are always frozen in place (they can still
+# look around), blinded, and unable to break or place blocks — this is no longer
+# configurable. Set the head start with /quarry headstart <seconds>.
+
+# Hunter catch-up buffs. When on, a hunter gains Strength I after being killed by a
+# runner 5 times, and Speed I after 10 (both last until the game ends). Hunters
+# also keep their inventory on death while this is on.
+# Toggle live in-game with /quarry manhunt helphunter <on|off> (op only).
+help-hunter: false
+
+# ──────────────────────────────────────────────────────────────────
+#  Dragon Rush — a race where everyone sprints to slay the Ender Dragon
+#  and whoever lands the final blow wins. Set these live in the GUI
+#  (/quarry rush) or here. All keys live under `rush.`.
+# ──────────────────────────────────────────────────────────────────
+rush:
+  # Seconds racers are frozen at the start before being released. 0 = no countdown.
+  countdown-seconds: 10
+  # Whether racers may damage each other (sabotage). false = pure speed race.
+  pvp: false
+  # Lives per racer before they're eliminated to spectator. 0 = infinite (death
+  # only costs time).
+  lives: 0
+  # Racers keep their inventory and XP on death.
+  keep-inventory: false
+  # Random-spread racers around world spawn at the start so nobody shares a spot.
+  scatter: true
+  # How many blocks from spawn to scatter within (used when scatter is true).
+  scatter-radius: 200
+  # Minutes before the race is called a draw if the dragon is still alive.
+  # 0 = no limit.
+  time-limit-minutes: 0

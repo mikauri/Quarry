@@ -1,0 +1,14 @@
+name: Quarry
+main: com.mikauri.quarry.Quarry
+version: 1.0.0
+api-version: '26.2'
+description: Two dragon-racing game modes — Manhunt (runners vs. tracking hunters) and Dragon Rush (everyone races for the final blow).
+commands:
+  quarry:
+    description: Quarry game control — Manhunt and Dragon Rush
+    usage: /quarry <manhunt|rush|status|stop|reload|help>
+    aliases: [mh, hunt]
+permissions:
+  quarry.admin:
+    description: Assign roles and start/stop games
+    default: op

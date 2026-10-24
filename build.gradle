@@ -1,0 +1,13 @@
+plugins { id 'java' }
+group = 'com.mikauri'
+version = '1.0.0'
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+repositories {
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+dependencies {
+    compileOnly('org.spigotmc:spigot-api:26.3-R0.1-SNAPSHOT:shaded') { transitive = false }
+}
+jar { archiveFileName = "Quarry-${version}.jar" }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
